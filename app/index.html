@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and checklist for all 55 Grand Theft Auto VI trophies: roadmap to the platinum, missable warnings, and a guide for every trophy with sources.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>Leonida Legend</h1>
+  <p class="tagline">Every trophy in GTA 6, with a plan to earn them all — and a checklist that remembers where you are.</p>
+  <div class="platinum-line">Platinum: Vice Got a Price! — earn the other 54 trophies.</div>
+  <div class="progress-wrap" aria-label="Overall progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-text" id="progressText">0 of 55 earned</p>
+  </div>
+  <p class="grade-counts" id="gradeCounts"></p>
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" class="tab active" data-view="checklist">Checklist</button>
+    <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+    <button type="button" class="tab" data-view="missable">Missables</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="controls">
+      <label class="control">Search
+        <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off">
+      </label>
+      <label class="control">Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+        </select>
+      </label>
+      <label class="control">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="control">Show
+        <select id="stateFilter">
+          <option value="all">All trophies</option>
+          <option value="todo">Not earned yet</option>
+          <option value="earned">Earned</option>
+        </select>
+      </label>
+      <label class="control check-control">
+        <input id="spoilerToggle" type="checkbox" checked>
+        Hide story spoilers until earned
+      </label>
+    </div>
+    <div class="actions">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-label">Import progress
+        <input id="importFile" type="file" accept="application/json,.json">
+      </label>
+      <button type="button" id="resetBtn" class="quiet">Reset progress</button>
+      <span class="saved-note" id="savedNote" role="status"></span>
+    </div>
+    <p class="count-line" id="countLine"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyNote" hidden>No trophies match these filters. Loosen the search or the filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="lede">PowerPyx rates this platinum 4 out of 10 in difficulty and about 200 hours, with a single playthrough enough. The time goes on the 100% checklist, the stunts and the WAiNK spots — not on hard fights. Work the phases in order.</p>
+    <ol class="roadmap">
+      <li>
+        <h3>Phase 1 — Play the story, and mind the one missable</h3>
+        <p>Chapters 1 to 4 plus the final mission, about 60 to 80 hours. Meditate at the Chapter 1 spot the moment it is offered — it is the only trophy that can be missed, and there is no mission replay. Keep a manual save at the start of every chapter. Pick up stranger missions as they appear, and start scanning vehicles and studying animals with the binoculars from the start.</p>
+        <p class="phase-trophies">Trophies: all story trophies, Positive Mental Attitude, the stranger strands, Master of None.</p>
+      </li>
+      <li>
+        <h3>Phase 2 — Robberies and partner jobs</h3>
+        <p>After the story opens the map up, work the robbery trophies: bank vaults, armored trucks, jewelry stores, shops with your partner, and one illegal operation per gang. Plan each getaway before you go in, and keep a fast car waiting. Launder marked bills through your contacts as you go so Dime on the Dollar builds up on its own.</p>
+        <p class="phase-trophies">Trophies: Maximum Withdrawal, A Classic Blitz Play, Sneakthief, Retail Therapy, Hot Together, Pest Control, Dime on the Dollar.</p>
+      </li>
+      <li>
+        <h3>Phase 3 — Collectibles and the long grinds</h3>
+        <p>The slow burn: 250 stunts, WAiNK at 100 locations, three card sets, 100 vehicles discovered, all of Leonida explored, every garage bought, ten vehicles registered. Do a little of each every session instead of saving one grind for the end.</p>
+        <p class="phase-trophies">Trophies: Cunning Stunts, You WAiNKer!, Don’t Touch My Deck, Whip It Good, The Goodtime State, Little Boxes, On the Spot.</p>
+      </li>
+      <li>
+        <h3>Phase 4 — Cleanup and the 100% checklist</h3>
+        <p>Open Progress, then Stats, then 100% Completion and work the checklist. You need any 70 of the 80 challenges and 50 for One Last Thing, so skip the ones you hate. The shooting range golds, drone race wins and the remaining activities finish here. A Long Road pops when the checklist is done, and the platinum follows.</p>
+        <p class="phase-trophies">Trophies: A Long Road, One Last Thing, The Shootist, Top Fun, Earn Cash, Not Kudos, and whatever is left.</p>
+      </li>
+    </ol>
+    <p class="note">Two habits for the whole run: keep cheats off — they disable trophies and saving — and remember there are no online trophies, so everything on this list is yours alone to earn.</p>
+  </section>
+
+  <section id="view-missable" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p class="lede">Good news first: almost nothing on this list can be missed. The published guides agree there is only one trophy to worry about.</p>
+    <div class="missable-card" id="missableCard"></div>
+    <h3>Three habits that keep you safe</h3>
+    <ul class="habits">
+      <li><strong>Save at every chapter.</strong> There is no mission replay and no New Game Plus, so a manual save at the start of each chapter is your only way back.</li>
+      <li><strong>Do the Chapter 1 meditation at once.</strong> Do not walk past it to do something else first.</li>
+      <li><strong>Keep cheats off.</strong> Cheats disable trophies and saving, so a cheat-filled session can cost you more than it saves.</li>
+    </ul>
+    <p class="note">Everything else on the list stays available in free-roam after the story, so the post-story cleanup in Phase 4 can catch anything you skipped.</p>
+  </section>
+
+  <section class="sources" id="sourcesSection">
+    <h2>Sources &amp; honesty notes</h2>
+    <p>Trophy names, descriptions and grades come from the published PSN trophy list, cross-checked between Exophase and PSNProfiles. The guides are written in the author’s own words. Where no outside guide had confirmed a method at launch, the guide says so and works from the official description alone — those entries are labelled “Strategy from the description”.</p>
+    <ul>
+      <li><a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> (roadmap, difficulty and time estimates, the missable warning, no mission replay, cheats)</li>
+      <li><a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — Grand Theft Auto VI trophies (PSN)</a> (names, descriptions, grades)</li>
+      <li><a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles — Grand Theft Auto VI trophies</a> (names, descriptions, grades)</li>
+      <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">OutputLag — GTA 6 Trophy List</a> (no mission replay, manual saves, the Chapter 1 meditation)</li>
+      <li><a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap</a></li>
+      <li><a href="https://gta-zone.com/news/gta-6-trophies-achievements/">GTA Zone — GTA 6 Trophy List</a></li>
+    </ul>
+    <p class="note">This is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this page uses no Rockstar artwork, logos or game images. It works fully offline: it loads nothing from the network.</p>
+  </section>
+</main>
+
+<div class="detail" id="detail" hidden>
+  <div class="detail-card" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <button type="button" class="detail-close" id="detailClose">Close ✕</button>
+    <p class="detail-grade" id="detailGrade"></p>
+    <h2 id="detailTitle"></h2>
+    <p class="detail-desc" id="detailDesc"></p>
+    <p class="detail-kind" id="detailKind"></p>
+    <h3>How to earn it</h3>
+    <p id="detailGuide"></p>
+    <h3>Sources</h3>
+    <ul id="detailSources"></ul>
+    <label class="detail-earned"><input type="checkbox" id="detailEarned"> I earned this trophy</label>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
