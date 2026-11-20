@@ -4,95 +4,72 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Legend — GTA 6 Trophy Guide &amp; Tracker</title>
-<meta name="description" content="An offline guide and checklist for all 55 Grand Theft Auto VI trophies on PlayStation 5, with a roadmap to the platinum.">
-<link rel="icon" href="data:,">
+<meta name="description" content="An offline guide and checklist for all 55 Grand Theft Auto VI trophies on PlayStation 5: 1 platinum, 2 gold, 6 silver, 46 bronze, with a roadmap to the platinum.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2339e6c3'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' font-family='sans-serif' font-weight='bold' fill='%230d1226'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero">
   <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
   <h1>Leonida Legend</h1>
-  <p class="tagline">Every GTA 6 trophy, one checklist. 55 trophies &mdash; 1 platinum, 2 gold, 6 silver, 46 bronze &mdash; with a guide for each one and a roadmap to the platinum.</p>
-  <div class="progress" aria-label="Checklist progress">
-    <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width: 0%"></div></div>
-    <p id="progress-text" class="progress-text">0 of 55 earned &middot; 0%</p>
+  <p class="subtitle">Every one of the 55 GTA VI trophies — what it asks, how to get it, and where you stand. Works fully offline; your checklist lives in this browser only.</p>
+  <div class="progress-wrap" aria-label="Trophy progress">
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+    <p class="progress-text"><span id="progress-count">0 / 55</span> trophies earned &middot; <span id="progress-percent">0%</span> to the platinum</p>
   </div>
-  <p class="grade-counts" id="grade-counts"></p>
+  <div class="grade-chips" id="grade-chips" aria-label="Trophies by grade"></div>
 </header>
 
 <main>
-  <section class="controls" aria-label="Checklist controls">
-    <input id="search" type="search" placeholder="Search trophies by name&hellip;" aria-label="Search trophies">
-    <div class="filter-row" role="group" aria-label="Filter by kind">
-      <button class="filter-btn active" data-kind="all" type="button">All 55</button>
-      <button class="filter-btn" data-kind="story" type="button">Story</button>
-      <button class="filter-btn" data-kind="activities" type="button">Activities</button>
-      <button class="filter-btn" data-kind="collectibles" type="button">Collectibles</button>
-      <button class="filter-btn" data-kind="missable" type="button">Missable</button>
-      <button class="filter-btn" data-kind="earned" type="button">Earned</button>
-      <button class="filter-btn" data-kind="todo" type="button">To do</button>
-    </div>
-    <div class="settings-row">
-      <label class="spoiler-toggle"><input id="spoiler-toggle" type="checkbox"> Spoiler-safe mode (hide guide text)</label>
-      <div class="data-buttons">
-        <button id="export-btn" type="button">Export checklist</button>
-        <button id="import-btn" type="button">Import checklist</button>
-        <input id="import-file" type="file" accept="application/json,.json" hidden>
-        <button id="reset-btn" type="button">Reset</button>
-      </div>
-    </div>
-    <p id="status-line" class="status-line" role="status"></p>
-  </section>
-
-  <section class="roadmap" id="roadmap" aria-labelledby="roadmap-heading">
-    <h2 id="roadmap-heading">Platinum roadmap</h2>
-    <p class="roadmap-intro">One playthrough is enough, no online trophies, and cheats disable trophies &mdash; keep them off until you are done. PowerPyx rates the platinum about 200 hours.</p>
+  <section class="roadmap" id="roadmap" aria-label="Platinum roadmap">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">One playthrough is enough — nothing here needs online play, and after the story the whole map stays open for clean-up. Work in this order:</p>
     <ol class="roadmap-steps">
-      <li><strong>Play the story (60&ndash;80 hours).</strong> Chapter endings and seven story missions award trophies on their own. Do the <em>Positive Mental Attitude</em> meditation with Lucia in Chapter 1 when it is offered &mdash; it may be the only missable one.</li>
-      <li><strong>Finish the Strangers &amp; Freaks strands.</strong> Eight strands earn the silver <em>Strangers &amp; Freaks</em>, and Andy, Kenton, Billy, Randy and Tyrone each have their own final-mission trophy.</li>
-      <li><strong>Clear the activities.</strong> Gold in all 42 Shooting Range challenges, drone races at all 14 locations, 20 different races, an arcade game, Cal&rsquo;s fishing challenge and every meditation spot.</li>
-      <li><strong>Do the crime trophies with your partner.</strong> Five bank vaults, an armored truck, a jewelry store without being seen, three shops in a row and an illegal operation from every gang.</li>
-      <li><strong>Collect along the way.</strong> Three card sets, 100 WAiNK scans, 100 discovered vehicles, every garage, $100,000 spent in shops and $250,000 laundered.</li>
-      <li><strong>Finish 100% completion for <em>A Long Road</em> (gold).</strong> That pops the platinum, <em>Vice Got a Price!</em>.</li>
+      <li><strong>Play the story at your leisure.</strong> Twelve story trophies pop on their own, plus the gold for the final mission. Enjoy Leonida first; the checklist can wait.</li>
+      <li><strong>Meditate everywhere, early.</strong> <em>Positive Mental Attitude</em> is the one trophy that can be missed — one of its 18 meditation spots becomes unavailable later. Meditate at every spot the moment you find it, and wait for the final zen animation.</li>
+      <li><strong>Try everything once.</strong> Sample all 9 activity types for <em>Master of None</em>, start the Stranger strands as they appear, and scan with WAiNK whenever you pass a landmark.</li>
+      <li><strong>Finish the story, then open the 100% checklist</strong> (Touch Pad &gt; Progress &gt; 100% Completion). <em>A Long Road</em> is the hardest trophy and drives the whole endgame — most other trophies fall out while you work through it.</li>
+      <li><strong>Clean up the grinds last:</strong> 250 stunts, 42 Shooting Range gold medals, 50 of the 80 Challenges, and the remaining collectible card sets.</li>
     </ol>
+    <p class="roadmap-note">Guides estimate the platinum at roughly 200&ndash;300 hours. Ten trophies carry methods the community is still confirming; their guides are labelled <em>Strategy from the description</em> and say so honestly.</p>
   </section>
 
-  <section aria-labelledby="list-heading">
-    <h2 id="list-heading">All 55 trophies</h2>
-    <p class="list-note">Names, descriptions and grades are the official trophy list. Guides are written for this app and cite their sources below. Hidden trophies are marked; turn on spoiler-safe mode to hide guide text.</p>
-    <div id="trophy-list" class="trophy-list"></div>
-    <p id="empty-state" class="empty-state" hidden>No trophies match this filter.</p>
+  <section class="controls" aria-label="Checklist controls">
+    <div class="control-row">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or keyword&hellip;" autocomplete="off"></label>
+      <label class="toggle"><input id="spoiler-toggle" type="checkbox"> Hide spoilers (guide text)</label>
+      <label class="toggle"><input id="earned-only" type="checkbox"> Earned only</label>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter by kind">
+      <button type="button" data-filter="all" class="filter active">All 55</button>
+      <button type="button" data-filter="story" class="filter">Story</button>
+      <button type="button" data-filter="activities" class="filter">Activities</button>
+      <button type="button" data-filter="collectibles" class="filter">Collectibles</button>
+      <button type="button" data-filter="missable" class="filter">Missable</button>
+    </div>
+    <div class="control-row">
+      <button type="button" id="export-btn">Export checklist</button>
+      <button type="button" id="import-btn">Import checklist</button>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <button type="button" id="reset-btn" class="danger">Reset checklist</button>
+      <span id="io-message" class="io-message" role="status"></span>
+    </div>
   </section>
 
-  <section class="sources" aria-labelledby="sources-heading">
-    <h2 id="sources-heading">Sources</h2>
-    <ul>
-      <li>Insider Gaming &mdash; Complete GTA 6 Trophy List (trophy names, descriptions, grades)</li>
-      <li>GameMapa &mdash; All 55 GTA 6 Trophies: Full List, Gamerscore and Platinum Roadmap (conditions and tips, via PowerPyx and GamesRadar+)</li>
-      <li>GamesFuze &mdash; GTA 6 Trophy List: All 55 Trophies &amp; Achievements (cross-check)</li>
-      <li>GameTrek &mdash; GTA 6 Trophy Guide: All 55 Achievements and Platinum Roadmap (cross-check)</li>
-    </ul>
-    <p class="disclaimer">Grand Theft Auto, GTA and Rockstar Games are trademarks of Take-Two Interactive. This is an unofficial fan-made guide. Trophy names, descriptions and grades belong to their owners; guide text is original to this app. Five trophies are labelled &ldquo;Strategy from the description&rdquo; because their exact unlock method is still unconfirmed.</p>
+  <section aria-label="Trophy list">
+    <p id="empty-state" class="empty-state" hidden>No trophies match the current filters.</p>
+    <ul id="trophy-list" class="trophy-list"></ul>
+  </section>
+
+  <section class="sources" aria-label="Sources">
+    <h2>Sources &amp; notes</h2>
+    <p>Official trophy names, descriptions and grades are quoted verbatim from the published PS5 trophy list, cross-checked across Push Square, Insider Gaming, PowerPyx, GameTrek, gamemapa, Mobalytics, Radio Times, KeenGamer and GamesFuze (November 2026). Guide text is original to this page. Where a method is unconfirmed, the guide is labelled <em>Strategy from the description</em> rather than presented as fact. Trophy counts: 55 total — 1 platinum, 2 gold, 6 silver, 46 bronze; 28 are hidden on PS5.</p>
+    <p>This is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. Built for the make.fun bounty “Build the best GTA 6 trophy guide”.</p>
   </section>
 </main>
 
-<div id="guide-modal" class="modal" hidden>
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button id="modal-close" class="modal-close" type="button" aria-label="Close guide">&times;</button>
-    <p id="modal-grade" class="modal-grade"></p>
-    <h3 id="modal-title"></h3>
-    <p id="modal-description" class="modal-description"></p>
-    <p id="modal-tags" class="modal-tags"></p>
-    <h4>Guide</h4>
-    <p id="modal-guide"></p>
-    <p id="modal-status" class="modal-status"></p>
-    <button id="modal-toggle" class="modal-toggle" type="button">Mark as earned</button>
-  </div>
-</div>
-
 <footer>
-  <p>Leonida Legend &mdash; an offline GTA 6 trophy guide &amp; tracker. Your checklist is stored only in this browser (localStorage).</p>
+  <p>Leonida Legend — an offline GTA VI trophy guide &amp; tracker. Your checklist is stored only in this browser (localStorage).</p>
 </footer>
 
 <script type="module" src="app.js"></script>
