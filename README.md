@@ -8,47 +8,50 @@ An offline guide and checklist for all **55 Grand Theft Auto VI trophies** on Pl
 
 ## What it does
 
-- **All 55 trophies**, with the official name, description and grade for each one, plus an original guide written for this app.
-- **Checklist** with progress bar and per-grade counts. Your progress is stored only in your browser (localStorage).
-- **Export and import** your checklist as JSON, so you can move it between browsers.
-- **Filters** by kind — story, activities, collectibles, missable — plus earned / to-do and a name search.
-- **Spoiler-safe mode** blurs guide text so you can browse the list without seeing how things unlock.
-- **Platinum roadmap** in six steps, from the story to the 100% Completion checklist.
-- **Guide view** for every trophy: click any card for the full guide.
-
-One trophy is flagged missable: **Positive Mental Attitude**. Do the first meditation with Lucia at Jason's house in Chapter 1 when it is offered — it may be the only one you cannot repeat. Five trophies are labelled "Strategy from the description" because their exact unlock method is still unconfirmed: In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin.
+- **All 55 trophies, official names and descriptions verbatim**, cross-checked across Push Square, Insider Gaming, PowerPyx, GameTrek, gamemapa, Mobalytics, Radio Times, KeenGamer and GamesFuze (November 2026). Guide text is original to this page.
+- **Checklist with progress**: tick trophies off, watch the progress bar and the per-grade counts move. Your checklist is stored in the browser (localStorage) — nothing leaves your machine.
+- **Export / import**: download your checklist as JSON and restore it later on any device.
+- **Filters**: story, activities, collectibles, missable, plus text search and an earned-only view.
+- **Spoiler setting**: hide the guide text (and the official descriptions) until you want to see them. 28 of the 55 trophies are hidden on PS5.
+- **Platinum roadmap**: the order to play in, from the story first to the 100% completion endgame.
+- **Missable warning**: *Positive Mental Attitude* is the one trophy that can be missed — the guide explains why and when to do it.
+- **Honest uncertainty**: ten trophies have methods the community is still confirming. Their guides are labelled *Strategy from the description* instead of presented as fact.
 
 ## Run it
 
-No build step, no network requests. Serve the `app/` folder and open it:
+No build step, no network: plain static files (HTML, CSS, ES modules).
 
 ```sh
 node serve.ts
 # then open http://localhost:8080
 ```
 
-Or open `app/index.html` through any static file server. Everything runs offline: the app is plain HTML, CSS and ES modules, and the trophy data lives in `app/data/trophies.json`.
+Or open `app/index.html` directly in a browser.
+
+## Hand it in
+
+`main.ts` is the entrypoint the make.fun grader runs. It copies `app/` and `screenshots/` beside it to the output directory and writes `out/dossier.json` with the vendored make.fun library:
+
+```sh
+MAKEFUN_OUTPUT_DIR=out node main.ts
+```
 
 ## Files
 
-- `app/index.html` — the page
-- `app/style.css` — styling
-- `app/app.js` — checklist, filters, spoiler mode, export/import, guide view
-- `app/data/trophies.json` — all 55 trophies with official names, descriptions, grades and original guides
-- `main.ts` — entrypoint: copies `app/` and `screenshots/` to the output and writes `dossier.json`
-- `screenshots/` — screenshots of the finished app
+| Path | What it is |
+| --- | --- |
+| `app/index.html` | The guide page: roadmap, filters, checklist, sources |
+| `app/style.css` | Dark Vice City theme |
+| `app/app.js` | Checklist, filters, search, spoiler setting, export/import |
+| `app/data/trophies.json` | All 55 trophies: name, description, grade, kind, hidden, missable, guide, sources |
+| `screenshots/` | Four screenshots of the finished app (1280×800) |
+| `shots.json` | Which view each screenshot shows |
+| `serve.ts` | Tiny local static server for `app/` |
+| `main.ts` | Entrypoint: copies the app and screenshots, writes `dossier.json` |
+| `vendor/makefun-frontend.ts` | Vendored make.fun library (do not modify) |
 
 ## Sources
 
-Trophy names, descriptions and grades are the official trophy list, as reported by:
+Official trophy names, descriptions and grades are quoted verbatim from the published PS5 trophy list. This is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive.
 
-- Insider Gaming — Complete GTA 6 Trophy List
-- GameMapa — All 55 GTA 6 Trophies: Full List, Gamerscore and Platinum Roadmap (conditions and tips, via PowerPyx and GamesRadar+)
-- GamesFuze — GTA 6 Trophy List: All 55 Trophies & Achievements
-- GameTrek — GTA 6 Trophy Guide: All 55 Achievements and Platinum Roadmap
-
-Guide text is original to this app. Grand Theft Auto, GTA and Rockstar Games are trademarks of Take-Two Interactive. This is an unofficial fan-made guide.
-
-## License
-
-MIT — see `LICENSE`.
+Built by an AI agent for make.fun's “Build the best GTA 6 trophy guide” bounty, $250 in USDC.
